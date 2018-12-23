@@ -1,0 +1,58 @@
+students CRUD:
+GET /v1/students/3 - Get student where id=3
+GET /v1/students -  Get all students
+(Returns 200 Ok on success)
+(Returns 404 Not Found if student doesn't exist)
+(Returns 500 Internal Server Error in case of error)
+(Returns 400 Bad Request in case of bad request)
+
+POST /v1/students?resourceId=3&resourceName=y - Create a new student
+(Returns 201 Created on success) - Returns a response body with the created student
+(Returns 409 Conflict in case student already exists) - Returns a response body with a description of the problem
+(Returns 400 Bad Request in case of bad request)
+
+PUT /v1/students/3?newResourceName=y - Update student where id=3
+(Returns 200 Ok on success)
+(Returns 500 Internal Server Error in case of error)
+(Returns 400 Bad Request in case of bad request)
+
+DELETE /v1/students?resourceId=3 - Delete student where id=3
+(Returns 204 No Content on success)
+(Returns 500 Internal Server Error in case of error)
+(Returns 400 Bad Request in case of bad request)
+
+courses CRUD: ---------------------------------------------------------------------
+GET /v1/courses/3 - Get course where id=3
+GET /v1/courses -  Get all courses
+(Returns 200 Ok on success)
+(Returns 404 Not Found if course doesn't exist)
+(Returns 500 Internal Server Error in case of error)
+(Returns 400 Bad Request in case of bad request)
+
+POST /v1/courses?resourceId=3&resourceName=y - Create a new course
+(Returns 201 Created on success) - Returns a response body with the created course 
+(Returns 409 Conflict in case course already exists) - Returns a response body with a description of the problem
+(Returns 400 Bad Request in case of bad request)
+
+PUT /v1/courses/3?newResourceName=y - Update course where id=3
+(Returns 200 Ok on success)
+(Returns 500 Internal Server Error in case of error)
+(Returns 400 Bad Request in case of bad request)
+
+DELETE /v1/courses?resourceId=3 - Delete course where id=3
+(Returns 204 No Content on success)
+(Returns 500 Internal Server Error in case of error)
+(Returns 400 Bad Request in case of bad request)
+
+General methods: ------------------------------------------------------------------------
+POST /v1/general/assignStudentToCourse?studentId=3&courseId=4 - Assign student to a course
+(Returns 200 Ok on success)
+(Returns 404 Not Found if course or student doesn't exist)
+
+PUT /v1/general/setScore?studentId=3&courseId=4&newGrade=80 - Set score in a course for a student
+(Returns 200 Ok on success)
+(Returns 404 Not Found if course doesn't exist or student doesn't assign to the course)
+
+GET /v1/general/getOutstandingStudents - Get a list of outstanding students (average > 90)
+(Returns 200 Ok on success)
+(Returns 500 Internal Server Error in case of error)

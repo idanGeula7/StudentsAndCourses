@@ -1,0 +1,28 @@
+{
+  "name": "bloxproject26102018",
+  "version": "1.0.0",
+  "description": "Author: Idan Geula.\r ID: 308559699.\r Linter used: ESLint.",
+  "main": "server.js",
+  "scripts": {
+    "start": "cls && node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/idanGeula7/StudentsAndCourses.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/idanGeula7/StudentsAndCourses/issues"
+  },
+  "homepage": "https://github.com/idanGeula7/StudentsAndCourses#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "mongodb": "^3.1.8",
+    "mongoose": "^5.3.6",
+    "underscore": "^1.9.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.7.0"
+  }
+}
